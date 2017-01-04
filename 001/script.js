@@ -12,6 +12,18 @@ window.onload = function(){
 		numSquares = document.getElementById("inputNumber").value;
 		color = document.getElementById("inputColor").value;
 		alert(numSquares + " " + color);
+		
+		// Change css (color)
+		
+		// Add square div's
+		while(numSquares > 0){
+			var newDiv = document.createElement("div");
+			var newDivId = "square" + numSquares;
+			document.getElementById("squareContainer").appendChild(newDiv);
+			//alert("hallo!");
+			numSquares--;
+		}
+		
 	}, false);
 	
 }
