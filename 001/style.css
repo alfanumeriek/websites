@@ -1,13 +1,12 @@
 #squareContainer{
-	background-color: red;
-	width: 400;
+	/*background-color: red;
+	width: 500;
 	height: 400;
-	padding: 1px;
+	padding: 1px;*/
 }
 
 .square{
 	float: left;
-	background-color: lightblue;
 	width: 30px;
 	height: 30px;
 	margin: 2px;
