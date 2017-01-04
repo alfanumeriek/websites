@@ -23,8 +23,8 @@ window.onload = function(){
 		while(numSquares > 0){
 			var newDivId = "square" + numSquares;
 			var newDiv = document.createElement("div");
-			newDiv.setAttribute('id', newDivId);
-			newDiv.setAttribute('class', 'square');
+			newDiv.id = newDivId;
+			newDiv.setAttribute("class", "square");
 			document.getElementById("squareContainer").appendChild(newDiv);
 			// Change color
 			document.getElementById(newDivId).style.background = color;
