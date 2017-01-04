@@ -4,6 +4,9 @@ var width,height;
 
 window.onload = function(){
 	
+	// Hide squares
+	document.getElementById("squareContainer").style.display = "none";
+	
 	// Where all squares will be put
 	var container = document.getElementById("squareContainer");
 	
@@ -11,19 +14,21 @@ window.onload = function(){
 	document.getElementById("buttonSubmit").addEventListener("click", function(){
 		numSquares = document.getElementById("inputNumber").value;
 		color = document.getElementById("inputColor").value;
-		alert(numSquares + " " + color);
 		
-		// Change css (color)
+		// Hide form fields and show squares
+		document.getElementById("formContainer").style.display = "none";
+		document.getElementById("squareContainer").style.display = "inline";
 		
 		// Add square div's
 		while(numSquares > 0){
-			var newDiv = document.createElement("div");
 			var newDivId = "square" + numSquares;
+			var newDiv = document.createElement("div");
+			newDiv.setAttribute('id', newDivId);
+			newDiv.setAttribute('class', 'square');
 			document.getElementById("squareContainer").appendChild(newDiv);
-			//alert("hallo!");
+			// Change color
+			document.getElementById(newDivId).style.background = color;
 			numSquares--;
 		}
-		
 	}, false);
-	
 }
