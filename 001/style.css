@@ -1,3 +1,24 @@
+#formContainer{
+  margin: auto;
+	padding: 15px;
+	max-width: 300px;
+	font: 15px Arial, Helvetica, sans-serif;
+	border: solid 2px #ff99e6;
+	border-radius: 25px;
+}
+
+h2{
+	color: #808080;
+	text-align: center;
+	position: relative;
+	top: -15px;
+}
+
+label{
+	width: 150px;
+	margin-right: 5px;
+}
+
 #squareContainer{
 	/*background-color: red;
 	width: 500;
@@ -10,4 +31,28 @@
 	width: 30px;
 	height: 30px;
 	margin: 2px;
+}
+
+input{
+	border: 1px solid #C2C2C2;
+	padding: 5px;
+	margin: 5px;
+}
+
+#inputNumber{
+	width: 50px;
+}
+
+#inputColor{
+	padding: 5px;
+	width: 50px;
+	height: 45px;
+	position: relative;
+	left: 80px;
+}
+
+#buttonSubmit{
+	margin-top: 10px;
+	position: relative;
+	left: 127px;
 }
