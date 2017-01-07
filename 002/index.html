@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Recepten</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script
+			  src="https://code.jquery.com/jquery-2.2.4.min.js"
+			  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+			  crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script>
+	// Initialize panel-menu
+	$(document).ready(function(){
+		$("body>[data-role='panel']").panel().enhanceWithin();
+	});
+</script>
+</head>
+
+<body>
+
+
+
+<!-- PANEL -->
+<div data-role="panel" id="panel-menu" data-position="left" data-display="overlay" data-theme="a">
+	<h2>Recepten</h2>
+	<ul data-role="listview">
+		<li data-icon="home"><a href="#page-home">home</a></li>
+		<li><a href="#page-voor">voorgerechten</a></li>
+		<li><a href="#page-hoofd">hoofdgerechten</a></li>
+		<li><a href="#page-na">nagerechten</a></li>
+	</ul>
+</div>
+
+<!-- ------ -->
+
+<!-- HOMEPAGE -->
+<div data-role="page" id="page-home">
+  <div data-role="header">
+		<a href="#panel-menu" class="ui-btn ui-icon-bars ui-btn-icon-notext">menu</a>
+    <h1>Recepten</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <p>Ga naar de pagina met <a href="#page-na">nagerechten</a>.</p>
+  </div>
+
+  <div data-role="footer">
+    <h1>Footer Text</h1>
+  </div>
+</div>
+<!-- --------- -->
+
+<!-- VOORGERECHTEN -->
+<div data-role="page" id="page-voor">
+  <div data-role="header">
+		<a href="#panel-menu" class="ui-btn ui-icon-bars ui-btn-icon-notext">menu</a>
+    <h1>Voorgerechten</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <p>Hier komen de voorgerechten te staan.</p>
+  </div>
+
+  <div data-role="footer">
+    <h1>Footer Text</h1>
+  </div>
+</div>
+<!-- --------- -->
+
+
+
+<!-- HOOFDGERECHTEN -->
+<div data-role="page" id="page-hoofd">
+  <div data-role="header">
+		<a href="#panel-menu" class="ui-btn ui-icon-bars ui-btn-icon-notext">menu</a>
+    <h1>Hoofdgerechten</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <p>Hier komen de hoofdgerechten te staan.</p>
+  </div>
+
+  <div data-role="footer">
+    <h1>Footer Text</h1>
+  </div>
+</div>
+<!-- --------- -->
+
+<!-- NAGERECHTEN -->
+<div data-role="page" id="page-na">
+  <div data-role="header">
+		<a href="#panel-menu" class="ui-btn ui-icon-bars ui-btn-icon-notext">menu</a>
+    <h1>Nagerechten</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <ul data-role="listview">
+			<li><a href="#page-ijs">IJs</a></li>
+			<li data-icon="check"><a href="#page-ijs">IJs</a></li>
+			<li><a href="#page-ijs">IJs</a></li>
+		</ul>
+  </div>
+
+  <div data-role="footer">
+    <h1>Footer Text</h1>
+  </div>
+</div>
+<!-- --------- -->
+
+
+<!-- IJS -->
+<div data-role="page" id="page-ijs">
+  <div data-role="header">
+		<a href="#panel-menu" class="ui-btn ui-icon-bars ui-btn-icon-notext">menu</a>
+    <h1>IJs</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+		<h2>Ingrediënten</h2>
+    <fieldset data-role="controlgroup">
+			<label><input type="checkbox"/>bak ijs</label>
+			<label><input type="checkbox"/>1 lepel</label>
+		</fieldset>
+		<h2>Bereiding</h2>
+		<!--ol data-role="listview" data-inset="true" style="white-space:normal"-->
+		<ol>
+			<li>Ik ben makelaar in koffi, en woon op de Lauriergracht No 37.</li><li>Het is mijn gewoonte niet, romans te schrijven, of zulke dingen, en het heeft dan ook lang geduurd, voor ik er toe overging een paar riem papier extra te bestellen, en het werk aan te vangen, dat gij, lieve lezer, zoâven in de hand hebt genomen, en dat ge lezen moet als ge makelaar in koffie zijt, of als ge wat anders zijt.</li><li>Niet alleen dat ik nooit iets schreef wat naar een roman geleek, maar ik houd er zelfs niet van, iets dergelijks te lezen, omdat ik een man van zaken ben.</li>
+		</ol>
+  </div>
+
+  <div data-role="footer">
+    <h1>Footer Text</h1>
+  </div>
+</div>
+<!-- --------- -->
+
+
+	
+</div>
+
+</body>
+</html>
