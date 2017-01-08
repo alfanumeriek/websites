@@ -1,0 +1,22 @@
+#gridContainer{
+	background-color: #333333;
+	width: 150px;
+	height: 150px;
+	padding: 0.5px;
+}
+
+#colorPalette{
+	background-color: green;
+	position: absolute;
+	top: 8px;
+	width: 150px;
+	height: 150px;
+}
+
+.square{
+	background: "#000099";
+	float: left;
+	width: 15px;
+	height: 15px;
+	margin: 0.5px;
+}
