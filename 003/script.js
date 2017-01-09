@@ -1,12 +1,14 @@
 var numSquares = 0;
-var activeColor = "white";
+var activeColorA = "white";
+var activeColorB = "black";
 var squareSize = 15;
+var newDiv;
 
 window.onload = function(){
 	drawGrid(20,20);
 }
 
-drawGrid = function(x, y){
+function drawGrid(x, y){
 	// x and y being the number of squares wide and high
 	var container = document.getElementById("gridContainer");
 	
@@ -24,18 +26,29 @@ drawGrid = function(x, y){
 	// Draw grid with squares
 	while(numSquares > 0){
 		var newDivId = "square" + numSquares;
-		var newDiv = document.createElement("div");
+		newDiv = document.createElement("div");
 		newDiv.id = newDivId;
 		newDiv.setAttribute("class", "square");
 		document.getElementById("gridContainer").appendChild(newDiv);
 		// Change color and size
-		document.getElementById(newDivId).style.background = activeColor;
-		document.getElementById(newDivId).style.width = squareSize+"px";
-		document.getElementById(newDivId).style.height = squareSize+"px";
+		newDiv = document.getElementById(newDivId);
+		newDiv.style.background = activeColorA;
+		newDiv.style.width = squareSize+"px";
+		newDiv.style.height = squareSize+"px";
+		// Add click event
+		newDiv.addEventListener("click", changeColor);
+		newDiv.addEventListener("context", changeColor);
 		numSquares--;
 	}
 }
 
-changeColor = function(){
-	
+function changeColor(e) {
+    //alert(e);
+		if(this.style.background = activeColorA){
+			this.style.background = activeColorB;
+		}
+		else{
+			this.style.background = activeColorA;
+		}
+		
 }
