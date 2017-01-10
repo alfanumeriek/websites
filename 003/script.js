@@ -1,6 +1,6 @@
 var numSquares = 0;
-var activeColorA = "white";
-var activeColorB = "black";
+var backgroundColor = "white";
+var activeColor = "black";
 var squareSize = 15;
 var newDiv;
 
@@ -32,23 +32,37 @@ function drawGrid(x, y){
 		document.getElementById("gridContainer").appendChild(newDiv);
 		// Change color and size
 		newDiv = document.getElementById(newDivId);
-		newDiv.style.background = activeColorA;
+		newDiv.style.background = backgroundColor;
 		newDiv.style.width = squareSize+"px";
 		newDiv.style.height = squareSize+"px";
 		// Add click event
-		newDiv.addEventListener("click", changeColor);
-		newDiv.addEventListener("context", changeColor);
+		newDiv.addEventListener("mousedown", startDrawing);
 		numSquares--;
 	}
+	
+	// Colorpicker
+	activeColor = document.getElementById("colorPicker").value;
+	document.getElementById("colorPicker").addEventListener("change", changeColor);
 }
 
-function changeColor(e) {
-    //alert(e);
-		if(this.style.background = activeColorA){
-			this.style.background = activeColorB;
-		}
-		else{
-			this.style.background = activeColorA;
-		}
-		
+function startDrawing(e) {
+		this.style.background = activeColor;
+		var allDivs = document.getElementById("gridContainer").childNodes;
+//alert(allDivs[1].id);
+		allDivs.forEach(function(div){
+			div.addEventListener("mouseover", startDrawing);
+			document.addEventListener("mouseup", stopDrawing);
+			//div.style.background = "pink";
+		});
+}
+
+function stopDrawing(e){
+	var allDivs = document.getElementById("gridContainer").childNodes;
+	allDivs.forEach(function(div){
+		div.removeEventListener("mouseover", startDrawing);
+	});
+}
+
+function changeColor(){
+	activeColor = document.getElementById("colorPicker").value;
 }
